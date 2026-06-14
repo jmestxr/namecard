@@ -86,32 +86,36 @@
         </section>
 
         <section class="profile" aria-label="Profile">
-          <div class="profile__identity">
-            <h1 id="card-name">Elizabeth Oh</h1>
-            <p class="role" id="card-role">Manager</p>
-            <div class="brand-stack" aria-label="Associated brands">
-              <img class="logo" src="assets/TXR-design-logo.png" alt="TXR Design">
-              <img class="logo" src="assets/TXR-builder-logo.png" alt="TXR Builder">
-              <img class="logo" style="scale:85%; margin-left: 16px;" src="assets/kian-shen-logo.jpg" alt="Kian Shen">
+          <div class="profile__header">
+            <div class="profile__identity">
+              <h1 id="card-name">Elizabeth Oh</h1>
+              <p class="role" id="card-role">Manager</p>
+            </div>
+
+            <div class="profile__brand">
+              <div class="profile__actions" aria-label="Card actions">
+                <button class="icon-button" id="shareButton" type="button" aria-label="Share card">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 12v8h16v-8"></path>
+                    <path d="M12 16V4"></path>
+                    <path d="m7 9 5-5 5 5"></path>
+                  </svg>
+                </button>
+                <button class="icon-button" id="saveButton" type="button" aria-label="Save contact">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <path d="M7 10l5 5 5-5"></path>
+                    <path d="M12 15V3"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="profile__brand">
-            <div class="profile__actions" aria-label="Card actions">
-              <button class="icon-button" id="shareButton" type="button" aria-label="Share card">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 12v8h16v-8"></path>
-                  <path d="M12 16V4"></path>
-                  <path d="m7 9 5-5 5 5"></path>
-                </svg>
-              </button>
-              <button class="icon-button" id="saveButton" type="button" aria-label="Save contact">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <path d="M7 10l5 5 5-5"></path>
-                  <path d="M12 15V3"></path>
-                </svg>
-              </button>
-            </div>
+          
+          <div class="brand-stack" aria-label="Associated brands">
+            <img class="logo" src="assets/TXR-design-logo.png" alt="TXR Design">
+            <img class="logo" src="assets/TXR-builder-logo.png" alt="TXR Builder">
+            <img class="logo" style="scale:85%; margin-left: 16px;" src="assets/kian-shen-logo.jpg" alt="Kian Shen">
           </div>
         </section>
 

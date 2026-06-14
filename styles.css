@@ -172,6 +172,15 @@ svg {
   background: white;
 }
 
+.brand-stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -193,20 +202,17 @@ svg {
   text-align: center;
 }
 
-.brand-stack {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  margin-top: 32px;
-  margin-bottom: 16px;
-}
-
 .profile {
-  align-items: flex-start;
-  display: flex;
+  /* align-items: flex-start; */
+  /* display: flex; */
   gap: 16px;
   justify-content: space-between;
   padding: 24px 20px 16px;
+}
+
+.profile__header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .profile__identity {
