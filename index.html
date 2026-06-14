@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#479fde">
+    <meta
+      name="description"
+      content="Digital namecard for Kian Shen Trading & Plumbing Services."
+    >
+    <meta property="og:title" content="Kian Shen | Digital Namecard">
+    <meta
+      property="og:description"
+      content="Digital namecard for Kian Shen Trading & Plumbing Services."
+    >
+    <meta
+      property="og:image"
+      content="assets/hero-plumbing.png"
+    >
+    <title>Kian Shen | Digital Namecard</title>
+    <link
+      rel="icon"
+      href="assets/kian-shen-logo.svg"
+      type="image/svg+xml"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="namecard" aria-labelledby="card-name">
+        <section class="hero carousel" aria-label="Kian Shen service photos">
+          <div class="carousel__track" id="carouselTrack">
+            <img
+              class="carousel__slide is-active"
+              src="assets/hero-plumbing.png"
+              alt="Kian Shen plumbing and home services"
+            >
+            <img
+              class="carousel__slide"
+              src="assets/plumbing.png"
+              alt="plumbing services"
+            >
+            <img
+              class="carousel__slide"
+              src="assets/electrical-works.jpg"
+              alt="electrical works"
+            >
+            <img
+              class="carousel__slide"
+              src="assets/floor-waterproofing.jpg"
+              alt="painting services"
+            >
+            <img
+              class="carousel__slide"
+              src="assets/repair.jpg"
+              alt="handyman services"
+            >
+          </div>
+          <button
+            class="carousel__button carousel__button--previous"
+            id="previousSlide"
+            type="button"
+            aria-label="Previous image"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </button>
+          <button
+            class="carousel__button carousel__button--next"
+            id="nextSlide"
+            type="button"
+            aria-label="Next image"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button>
+          <div class="carousel__dots" id="carouselDots" aria-label="Choose image">
+            <button class="is-active" type="button" aria-label="Show image 1" aria-current="true"></button>
+            <button type="button" aria-label="Show image 2"></button>
+            <button type="button" aria-label="Show image 3"></button>
+            <button type="button" aria-label="Show image 4"></button>
+            <button type="button" aria-label="Show image 5"></button>
+          </div>
+        </section>
+
+        <section class="profile" aria-label="Profile">
+          <div class="profile__identity">
+            <h1 id="card-name">Elizabeth Oh</h1>
+            <p class="role" id="card-role">Manager</p>
+            <div class="brand-stack" aria-label="Associated brands">
+              <img class="logo" src="assets/TXR-design-logo.png" alt="TXR Design">
+              <img class="logo" src="assets/TXR-builder-logo.png" alt="TXR Builder">
+              <img class="logo" style="scale:85%; margin-left: 16px;" src="assets/kian-shen-logo.jpg" alt="Kian Shen">
+            </div>
+          </div>
+          <div class="profile__brand">
+            <div class="profile__actions" aria-label="Card actions">
+              <button class="icon-button" id="shareButton" type="button" aria-label="Share card">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12v8h16v-8"></path>
+                  <path d="M12 16V4"></path>
+                  <path d="m7 9 5-5 5 5"></path>
+                </svg>
+              </button>
+              <button class="icon-button" id="saveButton" type="button" aria-label="Save contact">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <path d="M7 10l5 5 5-5"></path>
+                  <path d="M12 15V3"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="quick-actions" aria-label="Quick contact actions">
+          <a class="action action--primary" id="callLink" href="tel:+6596462445">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.33 1.8.62 2.65a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.28-1.28a2 2 0 0 1 2.11-.45c.85.29 1.74.5 2.65.62A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Call
+          </a>
+          <a class="action" id="whatsappLink" href="https://wa.me/6596462445">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.52 3.48A11.9 11.9 0 0 0 12.07 0 11.98 11.98 0 0 0 1.8 18.18L0 24l5.97-1.72A11.97 11.97 0 0 0 24 11.93a11.9 11.9 0 0 0-3.48-8.45z"></path>
+              <path d="M17.2 14.03c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.14-.19.3-.74.94-.9 1.13-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2-.17-.3-.02-.46.13-.6.13-.14.29-.35.43-.52.14-.17.19-.29.29-.48.1-.2.05-.37-.02-.52-.08-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.3-1 1-1 2.43s1.03 2.8 1.17 3c.15.2 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.7-.7 1.94-1.37.24-.67.24-1.24.17-1.36-.07-.13-.26-.2-.55-.35z"></path>
+            </svg>
+            WhatsApp
+          </a>
+          <a class="action" id="emailLink" href="mailto:kianshen1988@yahoo.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"></path>
+              <path d="m22 6-10 7L2 6"></path>
+            </svg>
+            Email
+          </a>
+        </section>
+
+        <section class="panel contact-panel" aria-labelledby="contact-title">
+          <div class="section-heading">
+            <span class="section-heading__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.33 1.8.62 2.65a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.28-1.28a2 2 0 0 1 2.11-.45c.85.29 1.74.5 2.65.62A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </span>
+            <h2 id="contact-title">Contact Information</h2>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <p class="label">Mobile</p>
+              <a id="mobileLink" href="tel:+6596462445">+65 9646 2445</a>
+            </div>
+            <div class="info-item">
+              <p class="label">Email</p>
+              <a id="staffEmailLink" href="mailto:kianshen1988@yahoo.com">kianshen1988@yahoo.com</a>
+            </div>
+            <div class="info-item">
+              <p class="label">Company Phone</p>
+              <a id="companyPhoneLink" href="tel:+6564581255">+65 6458 1255</a>
+            </div>
+            <div class="info-item">
+              <p class="label">Company WhatsApp</p>
+              <a id="companyWhatsappLink" href="https://wa.me/6591171255">+65 9117 1255</a>
+            </div>
+          </div>
+
+          <div class="qr-block">
+            <img
+              id="qrCode"
+              alt="QR code for this digital namecard"
+              width="132"
+              height="132"
+            >
+            <p>Scan to open this card</p>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="company-title">
+          <div class="section-heading">
+            <span class="section-heading__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 21h18"></path>
+                <path d="M5 21V7l8-4v18"></path>
+                <path d="M19 21V11l-6-4"></path>
+                <path d="M9 9v.01"></path>
+                <path d="M9 12v.01"></path>
+                <path d="M9 15v.01"></path>
+              </svg>
+            </span>
+            <h2 id="company-title">Company Information</h2>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item info-item--wide">
+              <p class="label">Address</p>
+              <a href="https://maps.google.com/?cid=7110607090072832176">
+                Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443
+              </a>
+            </div>
+            <div class="info-item">
+              <p class="label">Website</p>
+              <a href="https://www.kianshen.com/">www.kianshen.com</a>
+            </div>
+            <!-- <div class="info-item">
+              <p class="label">Services</p>
+            </div> -->
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="services">
+          <div class="section-heading">
+            <span class="section-heading__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 7.2a5.5 5.5 0 0 1-7.5 5.1l-6.9 6.9a2 2 0 0 1-2.8-2.8l6.9-6.9A5.5 5.5 0 0 1 16.8 2L15 5l3 3 4-0.8z"></path>
+              </svg>
+            </span>
+            <h2 id="company-title">Services</h2>
+          </div>
+
+          <details class="animated-accordion" name="services">
+            <summary>HDB/Condo/Landed House Renovation</summary>
+            <div class="content">
+              <ul>
+                <li>Demolition Works</li>
+                <li>Flooring & Tiling Works</li>
+                <li>Plumbing & Sanitary Works</li>
+                <li>Electrical Works</li>
+                <li>Ceiling Works</li>
+                <li>Painting & Plastering Works</li>
+                <li>Aluminium / Wrought Iron / Doors</li>
+                <li>Carpentry Works</li>
+                <li>Others</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="animated-accordion" name="services">
+            <summary>Plumbing Services</summary>
+            <div class="content">
+              <ul>
+                <li>Basin/Vanity Cabinet Installation</li>
+                <li>Heater Installation</li>
+                <li>Kitchen Sink Installation</li>
+                <li>Toilet Bowl Installation</li>
+                <li>Tap Installation</li>
+                <li>Exhaust Fan Installation</li>
+                <li>Bidet Installation</li>
+                <li>Clear Choke</li>
+                <li>Piping Works</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="animated-accordion" name="services">
+            <summary>Electrical Works</summary>
+            <div class="content">
+              <ul>
+                <li>LED Lights Installation</li>
+                <li>Ceiling &amp; Wall Fans Installation</li>
+                <li>Whole House Wiring</li>
+                <li>Power Socket Installation / Replacement</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="animated-accordion" name="services">
+            <summary>Painting Services</summary>
+            <div class="content">
+              <ul>
+                <li>Interior &amp; Exterior Painting</li>
+                <li>Anti-mould &amp; Odorless Painting</li>
+                <li>Scaffolding</li>
+                <li>Floor Waterproofing</li>
+                <li>Epoxy Works</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="animated-accordion" name="services">
+            <summary>Handyman Services</summary>
+            <div class="content">
+              <ul>
+                <li>Assembly of Taobao-bought furniture</li>
+                <li>Bin Chute Replacement</li>
+                <li>Others</li>
+              </ul>
+            </div>
+          </details>
+        </section>
+
+        <section class="socials" aria-label="Kian Shen links">
+          <a href="https://www.facebook.com/ks64581255/">
+            <img src="assets/facebook.png" alt="facebook-logo" class="social-icon">
+            Facebook
+          </a>          
+          <a href="https://www.instagram.com/kianshen.plumbing/">
+            <img src="assets/instagram.png" alt="instagram-logo" class="social-icon">
+            Instagram
+          </a>
+          <a href="https://shopee.sg/kianshen_plumbing">
+            <img src="assets/shopee.png" alt="shopee-logo" class="social-icon" style="scale:125%">
+            Shopee
+          </a>
+          <a href="https://carousell.com/u/kianshen_plumbing">
+            <img src="assets/carousell.png" alt="carousell-logo" class="social-icon" style="scale:110%">
+            Carousell
+          </a>
+        </section>
+
+        <section class="panel share-panel" aria-labelledby="whatsapp-title">
+          <div>
+            <h2 id="whatsapp-title">Send This Card</h2>
+            <p>Share the card link directly through WhatsApp.</p>
+          </div>
+          <form id="whatsappForm" class="whatsapp-form">
+            <label for="whatsappNumber">WhatsApp number</label>
+            <div class="form-row">
+              <span>+65</span>
+              <input
+                id="whatsappNumber"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="tel"
+                placeholder="9123 4567"
+              >
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </section>
+
+      </section>
+    </main>
+
+    
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

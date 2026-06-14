@@ -1,0 +1,633 @@
+@font-face {
+  font-display: swap;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://www.kianshen.com/cdn/fonts/assistant/assistant_n4.9120912a469cad1cc292572851508ca49d12e768.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://www.kianshen.com/cdn/fonts/assistant/assistant_n7.bf44452348ec8b8efa3aa3068825305886b1c83c.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://www.kianshen.com/cdn/fonts/rubik/rubik_n6.67aea03a872140ecba69ec8f230a6b23b75ea115.woff2") format("woff2");
+}
+
+:root {
+  --blue: #479fde;
+  --blue-dark: #1f6ea9;
+  --ink: #121212;
+  --muted: #5f6670;
+  --slate: #242833;
+  --line: #dce5ec;
+  --paper: #ffffff;
+  --soft: #f3f3f3;
+  --shadow: 0 24px 70px rgba(18, 18, 18, 0.16);
+  color-scheme: light;
+  font-family: Assistant, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(155deg, rgba(71, 159, 222, 0.18), transparent 34%),
+    linear-gradient(335deg, rgba(36, 40, 51, 0.14), transparent 32%),
+    var(--soft);
+  color: var(--ink);
+  font-family: Assistant, Arial, sans-serif;
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.shell {
+  display: grid;
+  min-height: 100vh;
+  padding: 18px;
+  place-items: start center;
+}
+
+.namecard {
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  max-width: 480px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero {
+  aspect-ratio: 5 / 4;
+  background: var(--slate);
+  min-height: 290px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__track {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.carousel__slide {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 260ms ease;
+  width: 100%;
+}
+
+.carousel__slide:first-child {
+  object-position: 62% 55%;
+}
+
+.carousel__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel__button {
+  align-items: center;
+  background: rgba(18, 18, 18, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  z-index: 2;
+}
+
+.carousel__button svg {
+  height: 24px;
+  width: 24px;
+}
+
+.carousel__button--previous {
+  left: 12px;
+}
+
+.carousel__button--next {
+  right: 12px;
+}
+
+.carousel__dots {
+  bottom: 14px;
+  display: flex;
+  gap: 8px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.carousel__dots button {
+  background: rgba(255, 255, 255, 0.58);
+  border: 0;
+  cursor: pointer;
+  height: 8px;
+  padding: 0;
+  width: 28px;
+}
+
+.carousel__dots button.is-active {
+  background: white;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  height: 70px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.logo-name {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.brand-stack {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.profile {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 24px 20px 16px;
+}
+
+.profile__identity {
+  min-width: 0;
+}
+
+.profile__brand {
+  align-items: flex-end;
+  display: flex;
+  flex: 0 0 132px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  color: var(--blue-dark);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: Rubik, Assistant, Arial, sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 0.97;
+  /* max-width: 10ch; */
+}
+
+h2 {
+  font-size: 1.04rem;
+}
+
+.role {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 10px 0 0;
+}
+
+.profile__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  align-items: center;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  width: 44px;
+}
+
+.icon-button svg {
+  height: 21px;
+  width: 21px;
+}
+
+.icon-button:focus-visible,
+.carousel__button:focus-visible,
+.carousel__dots button:focus-visible,
+.action:focus-visible,
+.socials a:focus-visible,
+.form-row button:focus-visible,
+.form-row input:focus-visible {
+  outline: 3px solid rgba(71, 159, 222, 0.42);
+  outline-offset: 2px;
+}
+
+.quick-actions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 20px 20px;
+}
+
+.action {
+  align-items: center;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: center;
+  min-height: 84px;
+  padding: 12px 8px;
+  text-decoration: none;
+}
+
+.action svg {
+  height: 23px;
+  width: 23px;
+}
+
+.action--primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
+.panel {
+  border-top: 1px solid var(--line);
+  padding: 22px 20px;
+}
+
+.section-heading {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-heading__icon {
+  align-items: center;
+  background: rgba(71, 159, 222, 0.12);
+  color: var(--blue-dark);
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.section-heading__icon svg {
+  height: 19px;
+  width: 19px;
+}
+
+.info-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.info-item {
+  border-left: 3px solid var(--blue);
+  min-width: 0;
+  padding-left: 12px;
+}
+
+.info-item p,
+.info-item a {
+  overflow-wrap: anywhere;
+}
+
+.info-item a {
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration-color: rgba(71, 159, 222, 0.55);
+  text-underline-offset: 3px;
+}
+
+.info-item p {
+  margin: 0;
+}
+
+.label {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.qr-block {
+  align-items: center;
+  background: var(--soft);
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 14px;
+}
+
+.qr-block img {
+  background: white;
+  display: block;
+  flex: 0 0 auto;
+  height: 132px;
+  padding: 8px;
+  width: 132px;
+}
+
+.qr-block p {
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0;
+}
+
+.share-panel {
+  background: var(--slate);
+  color: white;
+}
+
+.share-panel p {
+  color: rgba(255, 255, 255, 0.74);
+  margin: 4px 0 16px;
+}
+
+.whatsapp-form label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.form-row {
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.form-row span,
+.form-row input,
+.form-row button {
+  border: 0;
+  min-height: 48px;
+}
+
+.form-row span {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  font-weight: 700;
+  padding: 0 13px;
+}
+
+.form-row input {
+  min-width: 0;
+  padding: 0 12px;
+}
+
+.form-row button {
+  background: var(--blue);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0 16px;
+}
+
+.socials {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.socials a {
+  background: var(--soft);
+  color: var(--ink);
+  font-weight: 700;
+  min-width: 0;
+  padding: 16px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.toast {
+  background: var(--ink);
+  bottom: 18px;
+  color: white;
+  left: 50%;
+  max-width: calc(100vw - 32px);
+  opacity: 0;
+  padding: 10px 14px;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(-50%, 14px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  z-index: 5;
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (min-width: 560px) {
+  .shell {
+    padding: 36px 20px;
+  }
+
+  .namecard {
+    border: 1px solid rgba(18, 18, 18, 0.08);
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .info-item--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 360px) {
+  .shell {
+    padding: 0;
+  }
+
+  .profile,
+  .quick-actions,
+  .panel {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .quick-actions {
+    gap: 8px;
+  }
+
+  .action {
+    font-size: 0.9rem;
+    min-height: 78px;
+  }
+
+  .qr-block {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile {
+    gap: 12px;
+  }
+
+  .profile__brand {
+    flex-basis: 108px;
+  }
+
+  .logo {
+    height: 34px;
+    width: 58px;
+  }
+
+  .profile__actions {
+    gap: 6px;
+  }
+
+  .icon-button {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Enable height animation from 0 to auto globally */
+html {
+  interpolate-size: allow-keywords;
+}
+
+/* Base accordion styling */
+.animated-accordion {
+  border: 1px solid #ccc;
+  border-bottom-width: 0;
+  overflow: hidden;
+  /* margin-bottom: 10px; */
+}
+
+.animated-accordion:nth-last-child(1 of .animated-accordion) {
+  border-bottom-width: 1px;
+}
+
+.animated-accordion summary {
+  padding: 6px 12px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+/* 1. Core Animation Setup: Target the inner wrapper */
+.animated-accordion .content {
+  height: 0;
+  opacity: 0;
+  padding: 0 12px; /* Keep horizontal padding active */
+  transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+/* 2. Expanded State: Update the inner wrapper values when open */
+.animated-accordion[open] .content {
+  height: auto;
+  opacity: 1;
+  padding: 12px; /* Animate vertical padding into place */
+}
+
+/* Remove default browser arrows */
+.animated-accordion summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.animated-accordion summary::-webkit-details-marker {
+  display: none; /* Safari fix */
+}
+
+/* Add custom arrow pseudo-element */
+.animated-accordion summary::after {
+  content: "➔";
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when accordion opens */
+.animated-accordion[open] summary::after {
+  transform: rotate(90deg);
+}
+
+
+/* Icon Sizing */
+.social-icon {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
