@@ -190,7 +190,7 @@ function renderContact() {
     `tel:${contact.mobile}`;
 
   document.querySelector("#whatsappLink").href =
-    `https://wa.me/${contact.mobile.replace("+", "")}`;
+    `https://wa.me/65${contact.mobile.replace(/\s+/g, '')}`;
 
   document.querySelector("#emailLink").href =
     `mailto:${contact.email}`;
@@ -214,7 +214,7 @@ function renderContact() {
     contact.companyPhone;
 
   document.querySelector("#companyWhatsappLink").href =
-    `https://wa.me/${contact.customerWhatsapp.replace("+", "")}`;
+    `https://wa.me/65${contact.customerWhatsapp.replace(/\s+/g, '')}`;
 
   document.querySelector("#companyWhatsappLink").textContent =
     contact.customerWhatsapp;
