@@ -16,7 +16,7 @@ const contacts = {
 
   kianseng: {
     name: "Tan Kian Seng",
-    title: "Managing Director",
+    title: "Director",
     company: "Kian Shen Trading & Plumbing Services",
     mobile: "9780 5003",
     companyPhone: "6458 1255",
