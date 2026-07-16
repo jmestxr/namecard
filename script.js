@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const staffId = params.get("staff") || "elizabeth";
+console.log(staffId)
 
 const contacts = {
   elizabeth: {
@@ -75,7 +76,7 @@ function makeVCard() {
   return [
     "BEGIN:VCARD",
     "VERSION:3.0",
-    `N:Oh;Elizabeth;;;`,
+    `N:;${contact.name || ""};;;`,
     `FN:${contact.name}`,
     `ORG:${contact.company}`,
     `TITLE:${contact.title}`,
