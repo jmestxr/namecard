@@ -177,7 +177,7 @@ function startCarousel() {
 
 function setSlide(index) {
   showSlide(index);
-  // startCarousel();
+  startCarousel();
 }
 
 function renderContact() {
@@ -231,4 +231,4 @@ previousSlide.addEventListener("click", () => setSlide(activeSlide - 1));
 nextSlide.addEventListener("click", () => setSlide(activeSlide + 1));
 renderContact();
 renderQrCode();
-// startCarousel();
+startCarousel();
