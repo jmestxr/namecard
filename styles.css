@@ -329,7 +329,6 @@ h2 {
 .panel {
   border-top: 1px solid var(--line);
   padding: 22px 20px;
-  display: block !important;
 }
 
 .section-heading {
@@ -416,7 +415,6 @@ h2 {
 .share-panel {
   background: var(--slate);
   color: white;
-  display: block !important;
 }
 
 .share-panel p {
