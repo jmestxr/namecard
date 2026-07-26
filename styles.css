@@ -416,6 +416,7 @@ h2 {
 .share-panel {
   background: var(--slate);
   color: white;
+  display: block !important;
 }
 
 .share-panel p {
