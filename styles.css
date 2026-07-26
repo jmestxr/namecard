@@ -329,6 +329,7 @@ h2 {
 .panel {
   border-top: 1px solid var(--line);
   padding: 22px 20px;
+  display: block !important;
 }
 
 .section-heading {
