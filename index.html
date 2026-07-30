@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#479fde">
     <meta
       name="description"
-      content="Digital namecard for TXR Design, TXR Builder & Kian Shen Plumbing."
+      content="Digital namecard for TXR Design & Kian Shen."
     >
-    <meta property="og:title" content="TXR Design, TXR Builder, Kian Shen Plumbing | Digital Namecard">
+    <meta property="og:title" content="TXR Design, Kian Shen | Digital Namecard">
     <meta
       property="og:description"
-      content="Digital namecard for TXR Design, TXR Builder & Kian Shen Plumbing."
+      content="Digital namecard for TXR Design & Kian Shen."
     >
     <meta
       property="og:image"
@@ -100,6 +100,7 @@
         <section class="profile" aria-label="Profile">
           <div class="profile__header">
             <div class="profile__identity">
+              <img id="profile-pic" src="" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; display: none; margin-bottom: 20px;"/>
               <h1 id="card-name">Elizabeth Oh</h1>
               <p class="role" id="card-role">Manager</p>
             </div>
@@ -126,7 +127,7 @@
 
           <div class="brand-stack" aria-label="Associated brands">
             <img class="logo" src="assets/TXR-design-logo.png" alt="TXR Design">
-            <img class="logo" src="assets/TXR-builder-logo.png" alt="TXR Builder">
+            <!-- <img class="logo" src="assets/TXR-builder-logo.png" alt="TXR Builder"> -->
             <img class="logo" style="scale:85%; margin-left: 16px;" src="assets/kian-shen-logo.jpg" alt="Kian Shen">
           </div>
         </section>
@@ -189,7 +190,7 @@
             </div>
           </div>
 
-          <div class="qr-block">
+          <!-- <div class="qr-block">
             <img
               id="qrCode"
               alt="QR code for this digital namecard"
@@ -197,7 +198,7 @@
               height="132"
             >
             <p>Scan to open this card</p>
-          </div>
+          </div> -->
         </section>
 
         <section class="panel" aria-labelledby="company-title">
@@ -396,12 +397,12 @@
           </a>
         </section>
 
-        <section class="panel share-panel" aria-labelledby="whatsapp-title">
+        <section class="panel share-panel" aria-labelledby="qr-code">
           <div>
-            <h2 id="whatsapp-title">Send This Card</h2>
-            <p>Share the card link directly through WhatsApp.</p>
+            <h2 id="whatsapp-title">Scan to open this card</h2>
+            <!-- <p>Share the card link directly through WhatsApp.</p> -->
           </div>
-          <form id="whatsappForm" class="whatsapp-form">
+          <!-- <form id="whatsappForm" class="whatsapp-form">
             <label for="whatsappNumber">WhatsApp number</label>
             <div class="form-row">
               <span>+65</span>
@@ -414,7 +415,15 @@
               >
               <button type="submit">Send</button>
             </div>
-          </form>
+          </form> -->
+          <div class="qr-block">
+            <img
+                id="qrCode"
+                alt="QR code for this digital namecard"
+                width="132"
+                height="132"
+              >
+          </div>
         </section>
 
       </section>

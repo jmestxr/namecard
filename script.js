@@ -37,6 +37,19 @@ const contacts = {
     email: "kianshen1988@gmail.com",
     website: "https://www.kianshen.com/",
     address: "Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443",
+  },
+
+  james: {
+    name: "James Tan",
+    title: "Sales Representative",
+    company: "Kian Shen Trading & Plumbing Services",
+    mobile: "9742 8002",
+    companyPhone: "6458 1255",
+    customerWhatsapp: "9117 1255",
+    email: "kianshen1988@gmail.com",
+    website: "https://www.kianshen.com/",
+    address: "Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443",
+    profilePic: "assets/james.jpg",
   }
 };
 
@@ -45,7 +58,7 @@ const contact = contacts[staffId] || contacts.elizabeth;
 const toast = document.querySelector("#toast");
 const shareButton = document.querySelector("#shareButton");
 const saveButton = document.querySelector("#saveButton");
-const whatsappForm = document.querySelector("#whatsappForm");
+// const whatsappForm = document.querySelector("#whatsappForm");
 const whatsappNumber = document.querySelector("#whatsappNumber");
 const qrCode = document.querySelector("#qrCode");
 const slides = Array.from(document.querySelectorAll(".carousel__slide"));
@@ -219,11 +232,22 @@ function renderContact() {
 
   document.querySelector("#companyWhatsappLink").textContent =
     contact.customerWhatsapp;
+
+  const profilePicEl = document.querySelector("#profile-pic");
+  const profileHeader = document.querySelector(".profile__header");
+  if (contact.profilePic) {
+    profilePicEl.src = contact.profilePic;
+    profilePicEl.style.display = "";
+    profileHeader.classList.add("profile__header--centered");
+  } else {
+    profilePicEl.style.display = "none";
+    profileHeader.classList.remove("profile__header--centered");
+  }
 }
 
 shareButton.addEventListener("click", shareCard);
 saveButton.addEventListener("click", downloadContact);
-whatsappForm.addEventListener("submit", submitWhatsApp);
+// whatsappForm.addEventListener("submit", submitWhatsApp);
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => setSlide(index));
 });
