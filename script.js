@@ -41,7 +41,7 @@ const contacts = {
 
   james: {
     name: "James Tan",
-    title: "Sales Representative",
+    title: "Customer Service Associate",
     company: "Kian Shen Trading & Plumbing Services",
     mobile: "9742 8002",
     companyPhone: "6458 1255",
