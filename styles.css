@@ -662,6 +662,22 @@ html {
 }
 
 
+/* Awards Grid */
+.awards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.awards-grid img {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* Icon Sizing */
 .social-icon {
   height: 20px;
