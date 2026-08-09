@@ -65,6 +65,12 @@ const slides = Array.from(document.querySelectorAll(".carousel__slide"));
 const dots = Array.from(document.querySelectorAll("#carouselDots button"));
 const previousSlide = document.querySelector("#previousSlide");
 const nextSlide = document.querySelector("#nextSlide");
+const carouselTrack = document.querySelector("#carouselTrack");
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector("#lightboxImage");
+const lightboxClose = document.querySelector("#lightboxClose");
+const lightboxPrevious = document.querySelector("#lightboxPrevious");
+const lightboxNext = document.querySelector("#lightboxNext");
 let activeSlide = 0;
 let carouselTimer;
 
@@ -193,6 +199,27 @@ function setSlide(index) {
   startCarousel();
 }
 
+function updateLightboxImage() {
+  lightboxImage.src = slides[activeSlide].src;
+}
+
+function openLightbox(index) {
+  showSlide(index);
+  window.clearInterval(carouselTimer);
+  updateLightboxImage();
+  lightbox.hidden = false;
+}
+
+function closeLightbox() {
+  lightbox.hidden = true;
+  startCarousel();
+}
+
+function showLightboxSlide(index) {
+  showSlide(index);
+  updateLightboxImage();
+}
+
 function renderContact() {
   document.querySelector("#card-name").textContent =
     contact.name;
@@ -253,6 +280,24 @@ dots.forEach((dot, index) => {
 });
 previousSlide.addEventListener("click", () => setSlide(activeSlide - 1));
 nextSlide.addEventListener("click", () => setSlide(activeSlide + 1));
+carouselTrack.addEventListener("click", (event) => {
+  if (event.target.classList.contains("carousel__slide")) {
+    openLightbox(slides.indexOf(event.target));
+  }
+});
+lightboxClose.addEventListener("click", closeLightbox);
+lightboxPrevious.addEventListener("click", () => showLightboxSlide(activeSlide - 1));
+lightboxNext.addEventListener("click", () => showLightboxSlide(activeSlide + 1));
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !lightbox.hidden) {
+    closeLightbox();
+  }
+});
 renderContact();
 renderQrCode();
 startCarousel();
