@@ -166,7 +166,8 @@ svg {
   cursor: pointer;
   height: 8px;
   padding: 0;
-  width: 28px;
+  width: 8px;
+  border-radius: 100%;
 }
 
 .carousel__dots button.is-active {
