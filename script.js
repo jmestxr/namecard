@@ -49,7 +49,7 @@ const contacts = {
     email: "kianshen1988@gmail.com",
     website: "https://www.kianshen.com/",
     address: "Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443",
-    profilePic: "assets/james.jpg",
+    // profilePic: "assets/james.jpg",
   }
 };
 
