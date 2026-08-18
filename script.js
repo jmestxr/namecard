@@ -55,6 +55,59 @@ const contacts = {
 
 const contact = contacts[staffId] || contacts.elizabeth;
 
+const CLOUDINARY_CLOUD_NAME = "wzzu3in8";
+
+// Order here = display order in the carousel. Fill in public IDs after uploading to Cloudinary.
+const carouselImages = [
+  { publicId: "txr-vehicles", objectPosition: "62% 55%" },
+  { publicId: "9483" },
+  { publicId: "9486" },
+  { publicId: "112538" },
+  { publicId: "122719" },
+  { publicId: "104511" },
+  { publicId: "20180829-WA0028" },
+  { publicId: "9494" },
+  { publicId: "103117" },
+  { publicId: "155953" },
+  { publicId: "9501" },
+  { publicId: "9490" },
+  { publicId: "9496" },
+  { publicId: "9491" },
+  { publicId: "9459" },
+  { publicId: "9506" },
+];
+
+function cloudinaryUrl(publicId) {
+  return `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/f_auto,q_auto,w_1600/${publicId}`;
+}
+
+function buildCarousel() {
+  const track = document.querySelector("#carouselTrack");
+  const dotsContainer = document.querySelector("#carouselDots");
+
+  carouselImages.forEach((image, index) => {
+    const img = document.createElement("img");
+    img.className = index === 0 ? "carousel__slide is-active" : "carousel__slide";
+    img.src = cloudinaryUrl(image.publicId);
+    img.alt = "";
+    if (image.objectPosition) {
+      img.style.objectPosition = image.objectPosition;
+    }
+    track.append(img);
+
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Show image ${index + 1}`);
+    if (index === 0) {
+      dot.className = "is-active";
+      dot.setAttribute("aria-current", "true");
+    }
+    dotsContainer.append(dot);
+  });
+}
+
+buildCarousel();
+
 const toast = document.querySelector("#toast");
 const shareButton = document.querySelector("#shareButton");
 const saveButton = document.querySelector("#saveButton");
