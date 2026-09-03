@@ -1,26 +1,4 @@
-@font-face {
-  font-display: swap;
-  font-family: Assistant;
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://www.kianshen.com/cdn/fonts/assistant/assistant_n4.9120912a469cad1cc292572851508ca49d12e768.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: Assistant;
-  font-style: normal;
-  font-weight: 700;
-  src: url("https://www.kianshen.com/cdn/fonts/assistant/assistant_n7.bf44452348ec8b8efa3aa3068825305886b1c83c.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: Rubik;
-  font-style: normal;
-  font-weight: 600;
-  src: url("https://www.kianshen.com/cdn/fonts/rubik/rubik_n6.67aea03a872140ecba69ec8f230a6b23b75ea115.woff2") format("woff2");
-}
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Rubik:wght@600&display=swap");
 
 :root {
   --blue: #479fde;
