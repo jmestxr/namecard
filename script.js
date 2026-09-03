@@ -11,7 +11,7 @@ const contacts = {
     companyPhone: "6458 1255",
     customerWhatsapp: "9117 1255",
     email: "kianshen1988@gmail.com",
-    website: "https://www.kianshen.com/",
+    website: "https://kianshen.sg/",
     address: "Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443",
   },
 
@@ -23,7 +23,7 @@ const contacts = {
     companyPhone: "6458 1255",
     customerWhatsapp: "9117 1255",
     email: "kianshen1988@gmail.com",
-    website: "https://www.kianshen.com/",
+    website: "https://kianshen.sg/",
     address: "Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443",
   },
 
@@ -35,7 +35,7 @@ const contacts = {
     companyPhone: "6458 1255",
     customerWhatsapp: "9117 1255",
     email: "kianshen1988@gmail.com",
-    website: "https://www.kianshen.com/",
+    website: "https://kianshen.sg/",
     address: "Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443",
   },
 
@@ -47,7 +47,7 @@ const contacts = {
     companyPhone: "6458 1255",
     customerWhatsapp: "9742 8002",
     email: "kianshen1988@gmail.com",
-    website: "https://www.kianshen.com/",
+    website: "https://kianshen.sg/",
     address: "Blk 443 Ang Mo Kio Ave 10, #01-1255, Singapore 560443",
     // profilePic: "assets/james.jpg",
   }
@@ -129,7 +129,7 @@ let carouselTimer;
 
 function currentUrl() {
   if (window.location.protocol === "file:") {
-    return "https://www.kianshen.com/";
+    return "https://kianshen.sg/";
   }
 
   return window.location.href;
