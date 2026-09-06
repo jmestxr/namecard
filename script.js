@@ -113,7 +113,6 @@ const shareButton = document.querySelector("#shareButton");
 const saveButton = document.querySelector("#saveButton");
 // const whatsappForm = document.querySelector("#whatsappForm");
 const whatsappNumber = document.querySelector("#whatsappNumber");
-const qrCode = document.querySelector("#qrCode");
 const slides = Array.from(document.querySelectorAll(".carousel__slide"));
 const dots = Array.from(document.querySelectorAll("#carouselDots button"));
 const previousSlide = document.querySelector("#previousSlide");
@@ -219,11 +218,6 @@ function submitWhatsApp(event) {
   const singaporeNumber = digits.startsWith("65") ? digits : `65${digits}`;
   const message = encodeURIComponent(`Digital namecard of ${contact.name}: ${currentUrl()}`);
   window.open(`https://wa.me/${singaporeNumber}?text=${message}`, "_blank", "noopener");
-}
-
-function renderQrCode() {
-  const data = encodeURIComponent(currentUrl());
-  qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=264x264&margin=12&data=${data}`;
 }
 
 function showSlide(index) {
@@ -352,5 +346,4 @@ document.addEventListener("keydown", (event) => {
   }
 });
 renderContact();
-renderQrCode();
 startCarousel();

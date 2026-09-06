@@ -474,11 +474,17 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .share-panel p {
   color: rgba(255, 255, 255, 0.74);
   margin: 4px 0 16px;
+}
+
+.membership-link {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .whatsapp-form label {
